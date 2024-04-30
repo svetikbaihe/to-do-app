@@ -1,0 +1,34 @@
+@import '/src/assets/style/utils/colors.scss';
+
+.checkbox__wrapper {
+  display: flex;
+  align-items: center;
+  width: 540px;
+  height: 63px;
+  border-radius: 5px;
+  border: 0.5px solid $very-light-grayish-blue;
+}
+
+.checkbox__todo_task {
+  margin-left: 24px;
+}
+
+.checkbox__label {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox__todo_task {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkbox__check-img {
+  width: 21px;
+  height: 21px;
+}
+
+.checkbox__span {
+  margin-left: 22px;
+}
