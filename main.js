@@ -22,6 +22,3 @@ const $todoCheckbox = new InputCheckbox ({
 
 $app.appendChild($newTaskInput);
 $app.appendChild($todoCheckbox);
-
-
-

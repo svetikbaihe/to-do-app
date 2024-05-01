@@ -31,14 +31,10 @@ class InputText {
     $inputText.setAttribute('type', 'text');
     $inputText.setAttribute('placeholder', `${this.placeholder}`);
 
-    $inputText.addEventListener('keypress', function (e) {
+    $inputText.addEventListener('keypress', (e) => {
       if (e.key === 'Enter') {
-        const task = {
-          value: this.value,
-          id: '46hg',
-        }
-        this.todoService.addCheckbox(task)
-        this.value = '';
+        this.todoService.addTask($inputText.value);
+        $inputText.value = '';
       }
     });
 

@@ -1,21 +1,14 @@
 class TodoService {
-  active = localStorage.getItem('active')
-  completed = localStorage.getItem('completed')
+  all = localStorage.getItem('all')
 
   constructor () {
-    if (!this.active) {
-      this.initActiveList();
-    }
-    if (!this.completed) {
-      this.initCompletedList();
+    if (!this.all) {
+      this.initAllList();
     }
   }
 
   initAllList = () => {
-    const activeList = JSON.parse(localStorage.getItem('active'));
-    const completedList = JSON.parse(localStorage.getItem('completed'));
-
-    const allArr = activeList.concat(completedList);
+    const allArr = [];
 
     const allArrObj = JSON.stringify(allArr);
 
@@ -23,30 +16,73 @@ class TodoService {
 
   }
 
-  initActiveList = () => {
-    const activeArr = [];
+  updateActiveList = () => {
+    const allList = JSON.parse(localStorage.getItem('all'));
+
+    const activeArr = allList.filter(item=>item.task.isActive === true)
 
     const activeArrObj = JSON.stringify(activeArr);
 
     localStorage.setItem('active', activeArrObj);
   }
 
-  initCompletedList = () => {
-    const completedArr = [];
+  updateCompletedList = () => {
+    const allList = JSON.parse(localStorage.getItem('all'));
+
+    const completedArr = allList.filter(item=>item.task.isCompleted === true)
 
     const completedArrObj = JSON.stringify(completedArr);
 
     localStorage.setItem('completed', completedArrObj);
   }
 
-  addCheckbox = (checkbox) => {
+  addTask = (value) => {
+    const allList = JSON.parse(localStorage.getItem('all'));
+
+    const checkbox = {
+      id: allList.length + 1,
+      task: {
+        value: value,
+        isActive: true,
+        isCompleted: false
+      }
+ 
+    }
+
+    const newAllListArr = [...allList, checkbox];
+  
+    localStorage.setItem('all', JSON.stringify(newAllListArr));
+  
+    this.updateActiveList()
+    this.updateCompletedList()
+  }
+
+  deleteActiveCheckbox = (id) => {
     const activeList = JSON.parse(localStorage.getItem('active'));
 
-    const newActiveArr = [...activeList, checkbox];
+    const filteredActiveList = activeList.filter(item=> item.id !== id)
   
-    localStorage.setItem('active', JSON.stringify(newActiveArr));
+    localStorage.setItem('active', JSON.stringify(filteredActiveList));
   
-    console.log(newActiveArr);
+    console.log(filteredActiveList);
+  }
+
+  getAllList = () => {
+    const allList = JSON.parse(localStorage.getItem('all'));
+
+    return allList;
+  }
+
+  getActiveList = () => {
+    const activeList = JSON.parse(localStorage.getItem('active'));
+
+    return activeList;
+  }
+
+  getComletedList = () => {
+    const completedList = JSON.parse(localStorage.getItem('completed'));
+
+    return completedList;
   }
 }
 

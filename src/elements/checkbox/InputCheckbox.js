@@ -58,8 +58,6 @@ class InputCheckbox {
       $checkboxLabel.appendChild($checkImage);
       $checkboxLabel.appendChild($labelText);
       
-
-
       $checkboxWrapper.appendChild($inputCheckbox);
       $checkboxWrapper.appendChild($checkboxLabel);
     
