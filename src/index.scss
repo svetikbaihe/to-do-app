@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer fonts {
+  @font-face {
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/JosefinSans-Regular.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/fonts/JosefinSans-Bold.ttf) format("truetype");
+  }
+
+  html,
+  body,
+  #app {
+    height: 100%;
+    width: 100%;
+    font-family: "Josefin Sans", serif;
+  }
+}

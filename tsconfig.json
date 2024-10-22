@@ -1,0 +1,78 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@components": ["./components"],
+      "@components/*": ["./components/*"],
+
+      "@utils": ["./utils"],
+      "@utils/*": ["./utils/*"],
+
+      "@constants": ["./constants"],
+      "@constants/*": ["./constants/*"],
+
+      "@elements": ["./elements"],
+      "@elements/*": ["./elements/*"],
+
+      "@modules": ["./modules"],
+      "@modules/*": ["./modules/*"],
+
+      "@pages": ["./pages"],
+      "@pages/*": ["./pages/*"],
+
+      "@services": ["./services"],
+      "@services/*": ["./services/*"],
+
+      "@state": ["./state"],
+      "@state/*": ["./state/*"],
+
+      "@theme": ["./theme"],
+      "@theme/*": ["./theme/*"],
+
+      "@mock": ["./mock"],
+      "@mock/*": ["./mock/*"],
+
+      "@router": ["./router"],
+      "@router/*": ["./router/*"],
+
+      "@assets": ["./assets"],
+      "@assets/*": ["./assets/*"],
+
+      "@app": ["./app"],
+      "@app/*": ["./app/*"],
+
+      "@hooks": ["./hooks"],
+      "@hooks/*": ["./hooks/*"]
+    }
+  },
+  "typeRoots": [
+    "../node_modules/@types",
+    "../@types"
+  ],
+  "homepage": ".",
+  "include": ["src", "src/theme/theme.ts", "types/eslint-plugins.d.ts"],
+  "exclude": ["node_modules", "**/*.config.js"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
