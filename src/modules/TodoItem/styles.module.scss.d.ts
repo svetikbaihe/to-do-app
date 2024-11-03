@@ -1,0 +1,9 @@
+export declare const btnCheck: string
+export declare const btnCheckNotCheck: string
+export declare const btnCross: string
+export declare const btnCrossDark: string
+export declare const taskText: string
+export declare const taskTextChecked: string
+export declare const taskTextDark: string
+export declare const todoItemWrapper: string
+export declare const todoItemWrapperDark: string

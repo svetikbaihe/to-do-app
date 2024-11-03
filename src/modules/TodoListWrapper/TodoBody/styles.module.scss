@@ -1,0 +1,28 @@
+.todo_body_wrapper {
+  @apply mb-6 w-full min-w-[12.81rem] max-w-[33.75rem] bg-transparent;
+}
+
+.tabs_panel {
+  @apply flex w-full min-w-[12.81rem] max-w-[33.75rem] items-center justify-between;
+  @apply bg-lt-very-light-gray py-3 pl-6 pr-6 580:py-2;
+}
+
+.tabs_panel_empty_state {
+  @apply rounded-lg;
+}
+
+.tabs_panel_not_empty_state {
+  @apply rounded-b-lg;
+}
+
+.tabs_panel_dark {
+  @apply bg-dt-very-dark-desaturated-blue;
+}
+
+.tabs_panel_typography {
+  @apply text-xs font-bold text-lt-dark-grayish-blue;
+}
+
+.clear_completed_btn_inactive {
+  @apply cursor-not-allowed px-0 hover:text-lt-dark-grayish-blue !important;
+}

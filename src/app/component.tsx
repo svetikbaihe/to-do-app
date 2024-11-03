@@ -1,16 +1,18 @@
 import React, { StrictMode } from "react"
 import { ConfigProvider } from "antd"
-// import ContextProvider from '@app/providers/context/ContextProvider'
-// import RoutesProvider from './providers/Routes'
-import theme from "@theme/theme"
+import TodoListWrapper from "@modules/TodoListWrapper/component"
+import ContextProvider from '@app/providers/context/ContextProvider'
+import { themeBase } from "@theme/theme"
+import RootModal from "@modules/RootModal/component"
 
 const App: React.FC = () => {
   return (
     <StrictMode>
-      <ConfigProvider theme={theme}>
-        {/* <ContextProvider>
-          <RoutesProvider />
-        </ContextProvider> */}
+      <ConfigProvider theme={themeBase}>
+        <ContextProvider>
+          <RootModal/>
+          <TodoListWrapper />
+        </ContextProvider>
       </ConfigProvider>
     </StrictMode>
   )

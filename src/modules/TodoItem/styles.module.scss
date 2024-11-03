@@ -1,0 +1,46 @@
+.todo_item_wrapper {
+  @apply border-b-[0.2px] border-solid border-b-lt-dark-grayish-blue bg-lt-very-light-gray px-5 py-4;
+  @apply first:rounded-t-lg;
+  &:hover .btn_cross {
+    @apply visible opacity-100;
+  }
+}
+
+.todo_item_wrapper_dark {
+  @apply bg-dt-very-dark-desaturated-blue;
+}
+
+.btn_cross {
+  @apply invisible scale-[0.8] opacity-0;
+}
+
+.btn_cross_dark {
+  @apply fill-lt-very-light-gray;
+}
+
+.task_text {
+  @apply flex-1 cursor-pointer text-xs text-dt-very-dark-blue 580:text-sm;
+}
+
+.task_text_dark {
+  @apply text-lt-light-grayish-blue;
+}
+
+.task_text_checked {
+  @apply text-lt-dark-grayish-blue line-through;
+}
+
+.btn_check_not_check {
+  &:hover {
+    border: 1px solid transparent !important;
+    border-radius: 50% !important;
+    background-image: linear-gradient(white, white),
+      linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) !important;
+    background-origin: border-box !important;
+    background-clip: padding-box, border-box !important;
+  }
+}
+
+.btn_check {
+  @apply w-2 border-none bg-gradient-to-r from-check-bg-from to-check-bg-to !important;
+}

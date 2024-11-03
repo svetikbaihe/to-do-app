@@ -1,0 +1,11 @@
+.tabs_light {
+  @apply w-full min-w-[12.81rem] max-w-[33.75rem] rounded-md bg-lt-very-light-gray font-bold text-lt-dark-grayish-blue;
+}
+
+.tabs_not_empty_state {
+  @apply rounded-b-lg;
+}
+
+.tabs_dark {
+  @apply bg-dt-very-dark-desaturated-blue;
+}

@@ -1,10 +1,19 @@
 import path from "node:path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
+import svgr from 'vite-plugin-svgr'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), svgr({
+    svgrOptions: {
+      typescript: true,
+    },
+    esbuildOptions: {
+      loader: "tsx",
+    },
+    include: "**/*.svg?react",
+  }),],
   css: {
     modules: {
       localsConvention: "camelCase",

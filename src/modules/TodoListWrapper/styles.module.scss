@@ -1,0 +1,23 @@
+.todo_list_wrapper {
+  @apply h-full w-full overflow-auto px-[1.56rem] pt-12;
+}
+
+.todo_list_wrapper_bg_light_img {
+  @apply 580:bg-[url('/images/bg-desktop-light.jpg')] min-h-[30%] bg-[url('/images/bg-mobile-light.jpg')] bg-contain bg-no-repeat;
+}
+
+.todo_list_wrapper_bg_dark_img {
+  @apply 580:bg-[url('/images/bg-desktop-dark.jpg')] min-h-[30%] bg-[url('/images/bg-mobile-dark.jpg')] bg-contain bg-no-repeat;
+}
+
+.todo_list_wrapper_bg_light {
+  @apply bg-lt-very-light-grayish-blue;
+}
+
+.todo_list_wrapper_bg_dark {
+  @apply bg-dt-very-dark-blue;
+}
+
+.reoder_list {
+  @apply text-center text-lt-dark-grayish-blue;
+}

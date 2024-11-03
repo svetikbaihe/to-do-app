@@ -48,10 +48,14 @@ Users should be able to:
 - HTML markup
 - Typescript
 - React
+- React Responsive
+- React Draggable
 - SCSS/SASS
 - Tailwind
 - Ant Design
 - Flexbox
+- Formik
+- Yup
 - Mobile-first workflow
 - ESLint + Prettier
 - Vite(yarn)

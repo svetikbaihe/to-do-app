@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html,
+  body,
+  #app {
+    height: 100%;
+    width: 100%;
+    font-family: "Josefin Sans", serif;
+  }
+}
+
 @layer fonts {
   @font-face {
     font-family: "Josefin Sans";
@@ -18,12 +28,40 @@
     font-display: swap;
     src: url(/fonts/JosefinSans-Bold.ttf) format("truetype");
   }
-
-  html,
-  body,
-  #app {
-    height: 100%;
-    width: 100%;
-    font-family: "Josefin Sans", serif;
-  }
 }
+
+.dkfjk {
+  color: hsl(220, 98%, 61%);
+  color: hsl(192, 100%, 67%);
+  color: hsl(280, 87%, 65%);
+  color: hsl(0, 0%, 98%);
+  color: hsl(236, 33%, 92%);
+  color: hsl(233, 11%, 84%);
+  color: hsl(236, 9%, 61%);
+  color: hsl(235, 19%, 35%);
+  color: hsl(235, 21%, 11%);
+  color: hsl(235, 24%, 19%);
+  color: hsl(234, 39%, 85%);
+  color: hsl(236, 33%, 92%);
+  color: hsl(234, 11%, 52%);
+  color: hsl(233, 14%, 35%);
+  color: hsl(237, 14%, 26%);
+  
+  color: hsl(228, 6%, 85%)
+}
+
+// 'primary-bright-blue': '',
+// 'check-bg-from': '',
+// 'check-bg-to': '',
+// 'lt-very-light-gray': '',
+// 'lt-very-light-grayish-blue': '',
+// 'lt-light-grayish-blue': '',
+// 'lt-dark-grayish-blue': '',
+// 'lt-very-dark-grayish-blue': '',
+// 'dt-very-dark-blue': '',
+// 'dt-very-dark-desaturated-blue': '',
+// 'dt-light-grayish-blue': '',
+// 'dt-light-grayish-blue-hover': '',
+// 'dt-dark-grayish-blue': '',
+// 'dt-very-dark-grayish-blue': '',
+// 'dt-black-grayish-blue': ''
